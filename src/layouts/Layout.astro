@@ -1,7 +1,8 @@
 ---
 const { title } = Astro.props;
 import "../styles/global.css";
-
+// import "@fontsource-variable/onest";
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
@@ -14,6 +15,7 @@ import "../styles/global.css";
 		<title>{ title }</title>
 	</head>
 	<body>
+		<Header/>
 		<slot />
 	</body>
 </html>
@@ -30,7 +32,8 @@ import "../styles/global.css";
 		width: 100%;
 		height: 100%;
 		display: flex;
-		justify-content: center;
-		background-color: rgb(30, 33, 39);
+		flex-direction: column;
+		/* background-color: rgb(30, 33, 39); */
+		font-family: 'Onest Variable', sans-serif;
 	}
 </style>
