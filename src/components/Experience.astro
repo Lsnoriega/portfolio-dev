@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: 'Febrero 2022',
+        title: 'Application Ui code in Tailwind CSS',
+        description: 'Lorem ipsuLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor eros a est vestibulum, viverra blandit nisi tempor. Vivamus arcu elit, accumsan et finibus et, porta a metus. Pellentesque euismod quam commodo, mattis orci eu, vehicula libero. Ut nec orci at lorem molestie faucibus ut nec massa. Proin venenatis sagittis orci, quis porta mauris ullamcorper a. Nulla ac tortor quis ante sollicitudin eleifend. Integer risus metus, feugiat eu lobortis vel, convallis non erat.',
+        link: '#',
+    },
+    {
+        date: 'Febraury 2023',
+        title: 'Space X Launches',
+        description: 'Lorem ipsuLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor eros a est vestibulum, viverra blandit nisi tempor. Vivamus arcu elit, accumsan et finibus et, porta a metus. Pellentesque euismod quam commodo, mattis orci eu, vehicula libero. Ut nec orci at lorem molestie faucibus ut nec massa. Proin venenatis sagittis orci, quis porta mauris ullamcorper a. Nulla ac tortor quis ante sollicitudin eleifend. Integer risus metus, feugiat eu lobortis vel, convallis non erat.',
+        link: '#',
+    },
+    {
+        date: 'Febrero 2024',
+        title: 'SGH',
+        description: 'Lorem ipsuLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor eros a est vestibulum, viverra blandit nisi tempor. Vivamus arcu elit, accumsan et finibus et, porta a metus. Pellentesque euismod quam commodo, mattis orci eu, vehicula libero. Ut nec orci at lorem molestie faucibus ut nec massa. Proin venenatis sagittis orci, quis porta mauris ullamcorper a. Nulla ac tortor quis ante sollicitudin eleifend. Integer risus metus, feugiat eu lobortis vel, convallis non erat.',
+        link: '#',
+    },
+    
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }
+    
+</ol>
+

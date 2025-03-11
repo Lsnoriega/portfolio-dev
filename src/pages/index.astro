@@ -1,10 +1,14 @@
 ---
 // import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 import Badge from '../components/Badge.astro';
 import SocialPill from '../components/SocialPill.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import GitHubIcon from '../components/icons/GitHub.astro';
+import EmailIcon from '../components/icons/Email.astro';
+import BriefCase from '../components/icons/BriefCase.astro';
+import Experience from '../components/Experience.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -13,7 +17,8 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 <Layout title="My Portfolio">
 	<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 	<main>
-		<section class="lg:w-[740px] mx-auto py-44 w-full">
+		<SectionContainer class="py-44 pb-25">
+			<img src="src/assets/127_3329.JPG" alt="foto_perfil" class="rounded-full w-12 h-12 mb-3" >
 			<h1 class="font-bold text-5xl flex flex-row gap-x-10 pb-10">Hey, soy Luis Noriega <a href="https://ve.linkedin.com/" class="flex justify-center items-center"><Badge>Disponible</Badge></a></h1>
 			<h2 class="text-2xl"><span class="text-yellow-200/90">Ingeniero en Informática.</span><span class="text-red-200/90"> De Venezuela 😎.</span><span class="opacity-80"> Especializado en crear soluciones Web.</span></h2>
 
@@ -24,9 +29,17 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 				<SocialPill href="linkedin.com">
 					<GitHubIcon class="w-6 h-6"/> GitHub
 				</SocialPill>
+				<SocialPill href="linkedin.com">
+					<EmailIcon class="w-6 h-6"/> Lsnm.dev@gmail.com
+				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer>
+			<h3 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center"><BriefCase class="size-7"/> Experiencia</h3>
+			<Experience/>
+		</SectionContainer>
 	</main>
-</Layout><div ></div>
+</Layout>
 
 
