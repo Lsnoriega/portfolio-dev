@@ -1,0 +1,50 @@
+---
+import PHPIcon from "./icons/PHP.astro";
+import MySQLIcon from "./icons/Mysql.astro";
+
+const TAGS = {
+    PHP: {
+        name: 'PHP',
+        class: 'bg-blue-500/60 text-white-400',
+        icon: PHPIcon
+    },
+    MYSQL: {
+        name: 'MySQL',
+        class: 'bg-white text-orange-400',
+        icon: MySQLIcon
+    }
+}
+
+const PROJECTS = [
+    {
+        title: 'Project 1',
+        description: 'Lorem ipsuLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor eros a est vestibulum, viverra blandit nisi tempor. Vivamus arcu elit, accumsan et finibus et, porta a metus. Pellentesque euismod quam commodo, mattis orci eu, vehicula libero. Ut nec orci at lorem molestie faucibus ut nec massa. Proin venenatis sagittis orci, quis porta mauris ullamcorper a. Nulla ac tortor quis ante sollicitudin eleifend. Integer risus metus, feugiat eu lobortis vel, convallis non erat.',
+        link: '#',
+        github: 'Actualmente ...',
+        image: 'src/assets/projects/462_1x_shots_so.webp',
+        tags: [TAGS.PHP, TAGS.MYSQL],
+    },
+    
+]
+---
+
+{
+    PROJECTS.map(({title, description, link, github, image, tags}) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex flex-row gap-x-2 mb-2">
+            {tags.map((tag) => (
+                <li>
+                    <span class={`flex items-center gap-x-2 rounded-full text-xs py-1 px-2 md:text-base md:py-2 md:px-4 ${tag.class}`}>
+                        <tag.icon class="size-4"/>{tag.name}
+                    </span>
+                </li>
+            ))} 
+        </ul>
+        <img class="rounded shadow-2xl shadow-white/10" src={image} alt={title}/>
+      </article>
+      
+
+    ))
+}
