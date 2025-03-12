@@ -1,8 +1,7 @@
 ---
 import PHPIcon from "./icons/PHP.astro";
 import MySQLIcon from "./icons/MySQL.astro";
-import imgs from '../assets/projects/462_1x_shots_so.webp';
-import { Image } from "astro:assets";
+import Project1Image from '../assets/projects/462_1x_shots_so.webp';
 
 
 const TAGS = {
@@ -24,7 +23,7 @@ const PROJECTS = [
         description: 'Lorem ipsuLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor eros a est vestibulum, viverra blandit nisi tempor. Vivamus arcu elit, accumsan et finibus et, porta a metus. Pellentesque euismod quam commodo, mattis orci eu, vehicula libero. Ut nec orci at lorem molestie faucibus ut nec massa. Proin venenatis sagittis orci, quis porta mauris ullamcorper a. Nulla ac tortor quis ante sollicitudin eleifend. Integer risus metus, feugiat eu lobortis vel, convallis non erat.',
         link: '#',
         github: 'Actualmente ...',
-        image: imgs,
+        image: Project1Image.src,
         tags: [TAGS.PHP, TAGS.MYSQL],
     },
     
@@ -45,7 +44,7 @@ const PROJECTS = [
                 </li>
             ))} 
         </ul>
-        <Image class="rounded shadow-2xl shadow-white/10" src={image} alt={title}/>
+        <img class="rounded shadow-2xl shadow-white/10" src={image} alt={title} />
       </article>
       
 
