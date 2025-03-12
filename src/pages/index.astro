@@ -11,6 +11,8 @@ import BriefCaseIcon from '../components/icons/BriefCase.astro';
 import CodeIcon from '../components/icons/Code.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
+import Image from 'astro/components/Image.astro';
+import FotoPerfil from '../assets/127_3329.webp';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -20,7 +22,7 @@ import Projects from '../components/Projects.astro';
 <Layout title="My Portfolio">
 	<main class="px-5">
 		<SectionContainer class="py-44 pb-25">
-			<img src="src/assets/127_3329.webp" alt="foto_perfil" class="rounded-full w-12 h-12 mb-3" >
+			<Image src={FotoPerfil} alt="foto_perfil" class="rounded-full w-12 h-12 mb-3"/>
 			<h1 class="font-bold text-3xl md:text-4xl lg:text-5xl flex flex-row gap-x-10 pb-6 lg:pb-10">Hey, soy Luis Noriega <a href="https://ve.linkedin.com/" class="flex justify-center items-center"><Badge>Disponible</Badge></a></h1>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><span class="text-yellow-200/90">Ingeniero en Informática.</span><span class="text-red-200/90"> De Venezuela 😎.</span><span class="opacity-80"> Especializado en crear soluciones Web.</span></h2>
 
