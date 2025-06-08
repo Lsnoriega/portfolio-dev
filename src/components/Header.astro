@@ -20,7 +20,7 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "mailto:Lsnm.dev@gmail.com",
   },
 ]
 ---
@@ -93,18 +93,22 @@ const navItems = [
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
+    background-color: rgba(255, 255, 255, 0.5); /* bg-white/50 */
   }
 
-  nav {
-    @apply dark:bg-gray-800/90 bg-white/50;
+  /* Agregar clase para modo oscuro */
+  nav.dark {
+    background-color: rgba(31, 41, 55, 0.9); /* dark:bg-gray-800/90 */
   }
 
   @keyframes nav-shadown {
     0% {
-      @apply dark:bg-gray-800/0 bg-white/0;
+      background-color: rgba(31, 41, 55, 0); /* dark:bg-gray-800/0 */
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+      box-shadow: 0 10px 15px rgba(255, 255, 255, 0.1); /* shadow-lg ring-1 backdrop-blur ring-white/10 */
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
   }
 </style>

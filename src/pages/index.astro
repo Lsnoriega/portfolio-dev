@@ -1,66 +1,80 @@
 ---
 // import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Badge from '../components/Badge.astro';
-import SocialPill from '../components/SocialPill.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
-import EmailIcon from '../components/icons/Email.astro';
-import BriefCaseIcon from '../components/icons/BriefCase.astro';
-import CodeIcon from '../components/icons/Code.astro';
-import Experience from '../components/Experience.astro';
-import Projects from '../components/Projects.astro';
-import Image from 'astro/components/Image.astro';
-import FotoPerfil from '../assets/127_3329.webp';
-import TitleSection from '../components/TitleSection.astro';
-import ProfileCheck from '../components/icons/ProfileCheck.astro';
-import AboutMe from '../components/AboutMe.astro';
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import EmailIcon from "../components/icons/Email.astro";
+import BriefCaseIcon from "../components/icons/BriefCase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Image from "astro/components/Image.astro";
+import TitleSection from "../components/TitleSection.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import AboutMe from "../components/AboutMe.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
 ---
 
-<Layout title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas.">
-	<main class="px-5">
-		<SectionContainer class="py-44 pb-25">
-			<img src={FotoPerfil.src} alt="foto_perfil" class="rounded-full w-12 h-12 mb-3"/>
-			<h1 class="font-bold text-3xl md:text-4xl lg:text-5xl flex flex-row gap-x-10 pb-6 lg:pb-10">Hey, soy Luis Noriega <a href="https://ve.linkedin.com/" class="flex justify-center items-center"><Badge>Disponible</Badge></a></h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"><span class="text-yellow-200/90">Ingeniero en Informática.</span><span class="text-red-200/90"> De Venezuela 😎.</span><span class="opacity-80"> Especializado en crear soluciones Web.</span></h2>
+<Layout
+  title="Porfolio Lsnm.dev - Desarrollador y Programador Web"
+  description="Contrata a Lsnmdev para crear tu aplicación web o móvil. Desarrollador Web y Diseñador Gráfico. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-5">
+    <SectionContainer class="py-44 pb-25">
+      <img
+        src="127_3329.webp"
+        alt="foto_perfil"
+        class="rounded-full w-12 h-12 mb-3"
+      />
+      <h1
+        class="font-bold text-3xl md:text-4xl lg:text-5xl flex flex-row gap-x-10 pb-6 lg:pb-10"
+      >
+        Hey, soy Luis Noriega <a
+          href="https://ve.linkedin.com/"
+          class="flex justify-center items-center"><Badge>Disponible</Badge></a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span class="dark:text-yellow-200/90 dark:font-normal text-yellow-400 font-bold">Ingeniero en Informática.</span><span
+          class="dark:text-red-200/90 text-red-400/90"
+        >
+          De Venezuela 😎.</span
+        ><span class="opacity-80"> Especializado en crear soluciones Web.</span>
+      </h2>
 
-			<nav class="flex flex-wrap gap-4 mt-10"> 
-				<SocialPill href="linkedin.com">
-					<LinkedInIcon class="md:size-6 size-4"/> LinkedIn
-				</SocialPill>
-				<SocialPill href="linkedin.com">
-					<GitHubIcon class="md:size-6 size-4"/> GitHub
-				</SocialPill>
-				<SocialPill href="linkedin.com">
-					<EmailIcon class="md:size-6 size-4"/> Lsnm.dev@gmail.com
-				</SocialPill>
-			</nav>
-		</SectionContainer>
+      <nav class="flex flex-wrap gap-4 mt-10">
+        <SocialPill href="lhttps://www.linkedin.com/in/luis-noriega-484697336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_appinkedin.com">
+          <LinkedInIcon class="md:size-6 size-4" /> LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Lsnoriega">
+          <GitHubIcon class="md:size-6 size-4" /> GitHub
+        </SocialPill>
+        <SocialPill href="mailto:Lsnm.dev@gmail.com">
+          <EmailIcon class="md:size-6 size-4" /> Lsnm.dev@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
 
-		<SectionContainer id="experiencia">
-			<h3 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center"><BriefCaseIcon class="size-7"/> Experiencia</h3>
-			<Experience/>
-		</SectionContainer>
+    <SectionContainer id="experiencia">
+      <TitleSection> <BriefCaseIcon class="size-8" /> Experiencia</TitleSection>
+      <Experience />
+    </SectionContainer>
 
-		<SectionContainer id="proyectos">
-			<h3 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center"><CodeIcon class="size-7"/> Proyectos</h3>
-			<Projects/>
-		</SectionContainer>
+    <SectionContainer id="proyectos">
+      <TitleSection> <CodeIcon class="size-8" /> Proyectos</TitleSection>
+      <Projects />
+    </SectionContainer>
 
-		<SectionContainer id="sobre-mi">
-		<TitleSection>
-			<ProfileCheck class="size-8" />
-			Sobre mí
-		</TitleSection>
-		<AboutMe />
-		</SectionContainer>
-	</main>
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </main>
 </Layout>
-
-
