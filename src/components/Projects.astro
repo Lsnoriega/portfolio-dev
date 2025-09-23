@@ -3,7 +3,8 @@ import PHPIcon from "./icons/PHP.astro";
 import MySQLIcon from "./icons/MySQL.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
-import Project1Image from '../assets/projects/462_1x_shots_so.webp';
+import VercelIcon from "./icons/Vercel.astro";
+import Project1Image from '../../public/project_01.webp';
 import LinkButton from './LinkButton.astro';
 
 
@@ -17,17 +18,22 @@ const TAGS = {
         name: 'MySQL',
         class: 'bg-white text-orange-400',
         icon: MySQLIcon
+    },
+    Vercel: {
+        name: 'Vercel',
+        class: 'bg-white text-black',
+        icon: VercelIcon
     }
 }
 
 const PROJECTS = [
     {
-        title: 'Project 1',
-        description: 'Lorem ipsuLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor eros a est vestibulum, viverra blandit nisi tempor. Vivamus arcu elit, accumsan et finibus et, porta a metus. Pellentesque euismod quam commodo, mattis orci eu, vehicula libero. Ut nec orci at lorem molestie faucibus ut nec massa. Proin venenatis sagittis orci, quis porta mauris ullamcorper a. Nulla ac tortor quis ante sollicitudin eleifend. Integer risus metus, feugiat eu lobortis vel, convallis non erat.',
-        link: '#',
-        github: 'Actualmente ...',
+        title: 'Próxima pelicula de Marvel',
+        description: 'El proyecto muestra un contador regresivo hasta el estreno de la próxima película de Marvel, utilizando PHP para la lógica. La aplicación web ofrece una interfaz atractiva y fácil de usar, permitiendo a los usuarios ver cuánto tiempo falta para el lanzamiento oficial.',
+        link: 'https://mcuphp.vercel.app/',
+        github: 'https://github.com/Lsnoriega/curso-php-midu.git',
         image: Project1Image.src,
-        tags: [TAGS.PHP, TAGS.MYSQL],
+        tags: [TAGS.PHP, TAGS.Vercel],
     },
     
 ]
