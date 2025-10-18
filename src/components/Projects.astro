@@ -1,5 +1,9 @@
 ---
 import PHPIcon from "./icons/PHP.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import JavascriptIcon from "./icons/Javascript.astro";
+import TypescriptIcon from "./icons/Typescript.astro";
+import TailwindcssIcon from "./icons/Tailwindcss.astro";
 import MySQLIcon from "./icons/MySQL.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
@@ -23,6 +27,26 @@ const TAGS = {
         name: 'Vercel',
         class: 'bg-white text-black',
         icon: VercelIcon
+    },
+    Astro: {
+        name: 'Astro',
+        class: 'bg-white text-blue-400',
+        icon: AstroIcon
+    },
+    Javascript: {
+        name: 'JavaScript',
+        class: 'bg-yellow-400 text-white',
+        icon: JavascriptIcon
+    },
+    Typescript: {
+        name: 'Typescrit',
+        class: 'bg-blue-400 text-white',
+        icon: TypescriptIcon
+    },
+    Tailwindcss: {
+        name: 'Tailwindcss',
+        class: 'bg-blue-300 text-white',
+        icon: TailwindcssIcon
     }
 }
 
@@ -34,6 +58,14 @@ const PROJECTS = [
         github: 'https://github.com/Lsnoriega/curso-php-midu.git',
         image: Project1Image.src,
         tags: [TAGS.PHP, TAGS.Vercel],
+    },
+    {
+        title: 'Lanzamientos Space X',
+        description: 'El proyecto muestra los lanzamientos recientes de SpaceX utilizando TypeScrit para consumir la API pública de SpaceX. La aplicación web presenta una interfaz atractiva y fácil de usar, permitiendo a los usuarios explorar información detallada sobre cada lanzamiento, incluyendo fechas, misiones y resultados.',
+        link: 'https://astro3-spacexlaunches.vercel.app/',
+        github: 'https://github.com/Lsnoriega/astro3-spacexlaunches.git',
+        image: Project1Image.src,
+        tags: [TAGS.Astro, TAGS.Javascript, TAGS.Typescript, TAGS.Tailwindcss, TAGS.Vercel],
     },
     
 ]
